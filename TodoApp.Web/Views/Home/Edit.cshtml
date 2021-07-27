@@ -1,0 +1,22 @@
+﻿@model TodoItemViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="col-4">
+    <h1>Update Todo</h1>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(e => e.Id)
+        <div class="form-group">
+            <label for="text">Text</label>
+            @Html.EditorFor(e => e.Text, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter text" } })
+            <small id="text" class="form-text text-muted">A brief description of the task.</small>
+        </div>
+        <div class="form-group">
+            <label for="text">Done</label>
+            @Html.EditorFor(e => e.IsDone, new { htmlAttributes = new { @class = "form-control w-30" } })
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    }
+</div>

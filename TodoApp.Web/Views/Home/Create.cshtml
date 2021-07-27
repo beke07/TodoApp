@@ -1,0 +1,17 @@
+﻿@model CreateTodoCommand
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="col-4">
+    <h1>Create Todo</h1>
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <label for="text">Text</label>
+            @Html.EditorFor(e => e.Text, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter text" } })
+            <small id="text" class="form-text text-muted">A brief description of the task.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    }
+</div>

@@ -1,0 +1,22 @@
+﻿@model FilterDto
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("PageDown", "Home", FormMethod.Get))
+{
+    @Html.HiddenFor(e => e.IsDone)
+    @Html.HiddenFor(e => e.PageIndex)
+    @Html.HiddenFor(e => e.PageSize)
+    @Html.HiddenFor(e => e.TotalCount)
+    <button type="submit" class="btn btn-outline-primary mb-3 mr-2">&laquo;</button>
+}
+@using (Html.BeginForm("PageUp", "Home", FormMethod.Get))
+{
+    @Html.HiddenFor(e => e.IsDone)
+    @Html.HiddenFor(e => e.PageIndex)
+    @Html.HiddenFor(e => e.PageSize)
+    @Html.HiddenFor(e => e.TotalCount)
+    <button type="submit" class="btn btn-outline-primary mb-3">&raquo;</button>
+}
+

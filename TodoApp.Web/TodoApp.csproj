@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-TodoApp-55F31121-6ECC-4D91-AB2F-664FB1E49C27</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TodoApp.Bll\TodoApp.Bll.csproj" />
+    <ProjectReference Include="..\TodoApp.Dal\TodoApp.Dal.csproj" />
+  </ItemGroup>
+
+</Project>
