@@ -13,8 +13,8 @@ namespace TodoApp.Dal.Entities
 
         public bool IsDeleted { get; set; }
 
-        internal void Delete() => IsDeleted = true;
+        public void Delete() => IsDeleted = true;
 
-        internal void Restore() => IsDeleted = false;
+        public void Restore() => IsDeleted = false;
     }
 }

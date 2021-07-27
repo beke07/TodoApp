@@ -62,8 +62,24 @@ namespace TodoApp.Test
 
             todo.Update(null, null);
 
-            Assert.AreEqual(todo.IsDone, true);
+            Assert.AreEqual(todo.IsDone, false);
             Assert.AreEqual(todo.Text, null);
+        }
+
+        [Test]
+        public void DeleteTest()
+        {
+            const string OriginalText = "text";
+
+            var todo = new Todo(OriginalText);
+
+            todo.Delete();
+
+            Assert.AreEqual(todo.IsDeleted, true);
+
+            todo.Restore();
+
+            Assert.AreEqual(todo.IsDeleted, false);
         }
     }
 }
