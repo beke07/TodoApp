@@ -3,6 +3,9 @@
 ## Indítás
 Semmilyen előkészítés nem szükséges, csak el kell indtítani a projektet. Az alkalmazás elindítása után létrehozza magának a db-t, a tesztek futtatása során szintén.
 
+## Seed
+A projekt indulásakor 60 példaadatot tesz az alkalmazás a db-be, hogy teszelhetőek legyenek a funkciók
+
 ## Néhány komment a megoldásomhoz
 
 ### Felhasználókezelés
