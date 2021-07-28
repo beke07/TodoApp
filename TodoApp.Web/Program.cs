@@ -10,6 +10,7 @@ namespace TodoApp
             CreateHostBuilder(args)
                 .Build()
                 .MigrateDatabase()
+                .SeedDatabase()
                 .Run();
         }
 

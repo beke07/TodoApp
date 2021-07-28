@@ -6,7 +6,7 @@ namespace TodoApp.Bll.ViewModels
     {
         public int PageIndex { get; set; }
 
-        public int PageSize { get; set; } = 5;
+        public int PageSize { get; set; } = 25;
 
         public int TotalCount { get; set; }
 
